@@ -1,0 +1,126 @@
+
+:root {
+    --primary-color: #807124;
+    --secondary-color: #A09044;
+    --background-color: #C0B26A;
+    --text-color: #2C2C2C;
+}
+
+body {
+    font-family: 'Inria Serif', serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--secondary-color);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+header img {
+    height: 70px;
+    margin-top: 10px;
+    transition: transform 0.3s;
+}
+
+header img:hover {
+    transform: rotate(10deg);
+}
+
+.block1, .block2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.viden, .insbruk, .park {
+    flex: 1;
+    min-width: 300px;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: "Cascadia Code", monospace;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+.img img, .img2 img {
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.5s;
+    max-width: 100%;
+    height: auto;
+}
+
+.img img:hover, .img2 img:hover {
+    transform: scale(1.03);
+}
+
+.linia {
+    background-color: var(--primary-color);
+    height: 3px;
+    margin: 40px 0;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text, .text2 {
+    text-align: center;
+    margin: 20px;
+}
+
+.text2 h1 {
+    font-family: "Boldonse", system-ui;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+@media (max-width: 768px) {
+    .block1, .block2 {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .block2 {
+        flex-direction: column-reverse;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1rem;
+    }
+}
