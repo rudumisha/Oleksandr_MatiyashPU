@@ -1,0 +1,180 @@
+:root {
+    --primary-color: #807124;
+    --secondary-color: #C0A46A;
+    --background-color: #C0B26A;
+    --text-color: #2C2C2C;
+}
+
+body {
+    font-family: 'Inria Serif', serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 15px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+}
+
+.logo {
+    height: 60px;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: rotate(15deg);
+}
+
+.blok {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.visit {
+    position: relative;
+    font-family: "IM Fell DW Pica SC", serif;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.visit img {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    height: 90px;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+}
+
+.img img {
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.5s;
+    max-width: 100%;
+    height: auto;
+}
+
+.img img:hover {
+    transform: scale(1.03);
+}
+
+.Place h1 {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 20px;
+    font-size: 2rem;
+    color: var(--text-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.button a {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.button a:hover {
+    background-color: #6B5A1F;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.linia {
+    background-color: var(--primary-color);
+    height: 3px;
+    margin: 40px 0;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text, .text2 {
+    text-align: center;
+    margin: 20px;
+}
+
+.text2 h1 {
+    font-family: "Boldonse", system-ui;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .blok {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .visit {
+        font-size: 2rem;
+    }
+    
+    .visit img {
+        height: 70px;
+        top: 5px;
+    }
+    
+    .buttons {
+        justify-content: center;
+    }
+}
